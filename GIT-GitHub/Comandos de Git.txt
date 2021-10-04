@@ -1,0 +1,77 @@
+Principais comandos para trabalhar com o GIT
+
+
+Criar Repositórios (novo repositório ou obtém de um já existente)
+
+$ git init [nome do projeto]
+Cria um novo repositório local com um nome já definido
+
+$ git clone [url]
+Baixa um projeto e os históricos de versões
+
+
+Fazendo atualizações para entregar uma funcionalidade
+
+$ git branch
+Lista todos os branches (termo para definir versões funcionais)
+
+$ git branch [nome de uma nova branch]
+Cria uma nova branch com o nome informado
+
+$ git checkout [nome de uma branch existente]
+Altera conteúdo do local de trabalho para o snapshot da branch informada
+
+$ git merge [nome de uma branch existente]
+Combina a branch informada com a branch atual do git.
+
+$ git branch -d [nome de uma branch existente]
+Remove a branch informada
+
+
+Fazendo atualização pontual (revisão de alterações commit manual)
+
+$ git status
+Lista todas as alterações que precisam ser comitadas
+
+$ git diff
+Apresenta as diferenças entre arquivos que não estão staged
+
+$ git add [files]
+Adiciona o arquivo para o grupo (staged) que será comitado
+
+$ git diff –staged
+Apresenta as diferenças entre os arquivos staging e a ultima versão.
+
+$ git reset [file]
+Remove arquivo do grupo (staged) comitado mas preserva conteúdo.
+
+$ git commit -m “[descrição da alteração]“
+Gera um snapshot que pode ser utilizado futuramente para roolback por exemplo. Isso não gera uma versão apenas um snapshot, isso é
+importante para que as alterações sejam documentadas. Essa operação é realizada apenas localmente.
+
+
+Remover arquivos
+
+$ git rm [file]
+Remove o arquivo do local de trabalho e do stage
+
+$ git rm –cached [file]
+Remove o arquivo do stage mas não remove do local de trabalho
+
+$ git mv [nome do arquivo original] [novo nome do arquivo]
+Altera o nome do arquivo local e na area do stage, pronto para comitar.
+
+
+Histórico
+
+$ git log
+Lista o histórico das versões da branch atual
+
+$ git log –follow [file]
+Lista histórico de versão de arquivo, incluindo se também foi renomeado
+
+$ git diff [nome da primeira branch] [nome da segunda branch]
+Apresenta a diferença entre as duas branch
+
+$ git show [nome ou código de um commit]
+Apresenta todos os detalhes as mudanças de um commit especifico
